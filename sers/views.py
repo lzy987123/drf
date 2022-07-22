@@ -38,6 +38,7 @@ class StudentView(View):
 			"classmate": "307",
 			"description": "什么都没有~"
 		}
+		print(123)
 		serializer = Student1Serializer(data=data)
 		ret = serializer.is_valid()
 		if ret:
