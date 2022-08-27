@@ -35,7 +35,7 @@ class StudentView(View):
 			"name": "xiaoming",
 			"age": 11,
 			"sex": True,
-			"classmate": "307",
+			"classmate": "3071",
 			"description": "什么都没有~"
 		}
 		

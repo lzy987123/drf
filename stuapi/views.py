@@ -57,7 +57,7 @@ class StudentInfoView(View):
 			return JsonResponse(data={}, safe=False)
 
 	def put(self, request, pk):
-		data = json.loads(request.body)
+		data = json
 		name = data.get("name")
 		sex = data.get("sex")
 		age = data.get("age")

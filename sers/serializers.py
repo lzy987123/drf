@@ -1,13 +1,19 @@
 from rest_framework import serializers
 
 
+def check_classmate(data):
+	"""外部验证函数"""
+	if len(data) != 3:
+		raise serializers.ValidationError(detail="班级编号格式不正确！必须是3个字符", code="check_classmate")
+
+
 class Student1Serializer(serializers.Serializer):
 	"""学生信息序列化器"""
 	id = serializers.IntegerField(read_only=True)
 	name = serializers.CharField(required=True)
 	sex = serializers.BooleanField(default=True)
 	age = serializers.IntegerField(max_value=100, min_value=0)
-	classmate = serializers.CharField()
+	classmate = serializers.CharField(validators=[check_classmate])
 	description = serializers.CharField(allow_null=True, allow_blank=True)
 	
 	

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'stuapi',
     'students',
-    'sers'
+    'sers',
+    'mianshi'
 ]
 
 MIDDLEWARE = [
